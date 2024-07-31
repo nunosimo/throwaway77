@@ -1,0 +1,67 @@
+/bin/ls
+/bin/echo Hello
+/bin/pwd
+(only spaces)
+/bin/ls -l
+echo Hello
+echo "Hello, World!"
+echo -n "No newline"
+echo
+expr $? + $?
+exit
+exit 1
+exit 42
+/bin/ls
+echo $?
+/bin/ls nonexistentfile
+echo $?
+(ctrl-C in an empty prompt)
+(ctrl-\ in an empty prompt)
+(ctrl-D in an empty prompt)
+(ctrl-C after typing some text)
+(ctrl-D after typing some text)
+(ctrl-\ after typing some text)
+echo "cat lol.c | cat > lol.c"
+echo "Hello $USER, you are in $PWD"
+echo '$USER'
+echo 'Hello $USER, you are in $PWD'
+echo 'cat file.c | cat > file.c
+env
+export TEST_VAR=hello
+env | grep TEST_VAR
+unset TEST_VAR
+env | grep TEST_VAR
+cd /
+pwd
+cd -
+pwd
+cd ..
+pwd
+cd ~
+pwd
+cd nonexistentdir
+cd .. test
+ls
+wc -l
+unset PATH
+ls
+export PATH=/bin:/usr/bin
+ls
+echo $PATH
+exit
+echo $PATH
+echo "Hello World" > output.txt
+cat < output.txt
+echo "Appending text" >> output.txt
+cat < output.txt
+cat << EOF > output.txt
+Hello, World!
+EOF
+cat /etc/passwd | grep root
+cat /etc/passwd | grep root | wc -l
+ls -l | wc -l
+ls nonexistentfile | grep bla | more
+echo "Hello World" | wc -c > output.txt
+cat << EOF | grep "Hello" | wc -l > count.txt | ls -l >> result.txt
+
+valgrind --suppressions=readline_leaks --leak-check=full ./minishell
