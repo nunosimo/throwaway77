@@ -65,6 +65,6 @@ cat /etc/passwd | grep root | wc -l
 ls -l | wc -l
 ls nonexistentfile | grep bla | more
 echo "Hello World" | wc -c > output.txt
-cat << EOF | grep "Hello" | wc -l > count.txt | ls -l >> result.txt
+
 
 valgrind --suppressions=readline_leaks.txt --leak-check=full ./minishell
