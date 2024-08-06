@@ -21,6 +21,9 @@ echo $?
 (ctrl-C after typing some text)
 (ctrl-D after typing some text)
 (ctrl-\ after typing some text)
+(ctrl-C after echo << EOF)
+(ctrl-D after echo << EOF)
+(ctrl-\ after echo << EOF)
 echo "cat lol.c | cat > lol.c"
 echo "Hello $USER, you are in $PWD"
 echo '$USER'
@@ -64,4 +67,4 @@ ls nonexistentfile | grep bla | more
 echo "Hello World" | wc -c > output.txt
 cat << EOF | grep "Hello" | wc -l > count.txt | ls -l >> result.txt
 
-valgrind --suppressions=readline_leaks --leak-check=full ./minishell
+valgrind --suppressions=readline_leaks.txt --leak-check=full ./minishell
